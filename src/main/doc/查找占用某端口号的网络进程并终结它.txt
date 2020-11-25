@@ -1,0 +1,6 @@
+CMD下
+C:\Users\Nicklaus>netstat -ano | findstr 8081
+  TCP    0.0.0.0:8081           0.0.0.0:0              LISTENING       17624
+
+C:\Users\Nicklaus>taskkill -PID 17624 -F
+成功: 已终止 PID 为 17624 的进程。
