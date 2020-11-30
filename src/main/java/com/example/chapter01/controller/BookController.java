@@ -7,8 +7,12 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class BookController {
-    @Autowired
     Book book;
+
+    @Autowired
+    public BookController(Book book) {
+        this.book = book;
+    }
     @GetMapping("/book")
     public String book(){
         return book.toString();
